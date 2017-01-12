@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   root "users#show"
 
-  resources :users, param: :name, only: [:new, :create, :show] do
-    resources :boards, param: :name
+  resources :users, param: :name do
+    resources :boards, param: :name, shallow: true do
+      resources :pins
+    end
   end
 
   resources :sessions, only: [:new, :create, :destroy]
