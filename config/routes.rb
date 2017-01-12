@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   root "boards#index"
 
-  resources :users, only: [:new, :create]
-  resources :boards
+  resources :users, only: [:new, :create] do
+    resources :boards
+  end
 
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
