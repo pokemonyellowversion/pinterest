@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @boards = Board.all
   end
 
+
   private
   def user_params
   	params.require(:user).permit(:name, :email, :password, :password_confirmation)

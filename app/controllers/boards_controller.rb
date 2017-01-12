@@ -29,7 +29,7 @@ class BoardsController < ApplicationController
 
 	def update
 		if @board.update_attributes(board_params)
-			redirect_to boards_path
+			redirect_to user_boards_path(:user_name)
 		else
 			render :edit
 		end

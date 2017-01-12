@@ -1,8 +1,8 @@
 <h1>All Boards</h1>
 
 <% @boards.each do |board| %>
-	<%= board.name %>
-	<%= link_to 'Show', board %>
+	<h3><%= link_to board.name, board %></h3>
+
 	<%= link_to 'Edit', edit_board_path(board) %>
 	<%= link_to 'Destroy', board, method: :delete, data: {
 		confirm: 'Are you sure?' } %>
@@ -11,4 +11,4 @@
 <br>
 
 <%= link_to 'New Board', new_user_board_path %>
-<%= link_to 'Back' %>
+<%= link_to 'Back', user_path(:user_name) %>
