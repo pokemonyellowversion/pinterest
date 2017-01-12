@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  root "boards#index"
+  root "users#show"
 
-  resources :users, only: [:new, :create] do
-    resources :boards
+  resources :users, param: :name, only: [:new, :create, :show] do
+    resources :boards, param: :name
   end
 
   resources :sessions, only: [:new, :create, :destroy]

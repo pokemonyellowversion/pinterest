@@ -1,0 +1,11 @@
+<h1>Profile Name</h1>
+
+<%= link_to "Boards" %>
+<%= link_to "Pins" %>
+<%= link_to "Likes" %>
+
+<br>
+
+<% @boards.each do |board| %>
+	<%= board.name %>
+<% end %>
