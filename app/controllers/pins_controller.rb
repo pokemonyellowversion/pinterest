@@ -7,15 +7,23 @@ class PinsController < ApplicationController
 	end
 
 	def show
+		@pin = Pin.find(params[:id])
 	end
 
 	def new
+		@pin = Pin.new
 	end
 
 	def edit
 	end
 
 	def create
+		@pin = Pin.new(pin_params)
+			if @pin.save
+				redirect_to boards_path
+			else
+				render :new
+			end
 	end
 
 	def update
