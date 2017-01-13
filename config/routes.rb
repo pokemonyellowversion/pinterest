@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   root "users#show"
 
-  resources :users, param: :name do
-    resources :boards, shallow: true do
-      resources :pins
-    end
+  resources :users
+
+  resources :boards, shallow: true do
+    resources :pins
   end
 
   resources :sessions, only: [:new, :create, :destroy]
