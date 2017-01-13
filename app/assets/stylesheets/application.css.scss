@@ -10,6 +10,22 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *
+ *= require rails_bootstrap_forms
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+ .headingName {
+ 	font-size: 48px;
+ 	letter-spacing: -1.75px;
+ 	line-height: 56px;
+ 	word-spacing: -2.75px;
+ 	font-weight: bold;
+ 	color: #555;
+ 	font-family: "Helvetica Neue", Helvetica
+ }
