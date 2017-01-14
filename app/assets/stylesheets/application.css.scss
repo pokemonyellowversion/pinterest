@@ -79,14 +79,39 @@ a:hover {
     text-decoration: none;
 }
 
-img {
+div.card img {
 	max-width: 236px;
 	border-radius: 8px;
+    float: left;
+    position: relative;
+}
+
+div.card img:hover {
+    opacity: 0.8;
+}
+
+input {
+    display: none;
+}
+
+.card:hover input{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.card:hover input.delete{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 20px;
 }
 
 .card {
 	width: 256px;
 	display:inline-block;
-	margin: -10px;
+	margin: auto;
     padding: 10px;
+    position: relative;
 }
