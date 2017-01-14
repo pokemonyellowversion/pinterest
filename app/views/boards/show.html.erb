@@ -1,15 +1,21 @@
-<p>
-  <strong>Board Name:</strong>
-  <%= @board.name %>
+<div class="boardHeader">
+  <h1 class="boardName"><%= @board.name %></h1>
+</div>
 
-</p>
+<% @pins.each do |pin| %>
 
-<ul>
-	<% @pins.each do |pin| %>
-		<li><%= image_tag pin.image.url %></li>
-	<% end %>
-</ul>
+<div class="card" style="width: 20rem;">
+  <div class="pin-image"><%= image_tag pin.image.url %></div>
+  <div class="card-block">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+		
+<% end %>
+
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %> |
 <%= link_to 'Save Pin', new_board_pin_path(:board_id) %>
+
