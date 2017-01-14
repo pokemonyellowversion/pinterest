@@ -1,8 +1,14 @@
 <p>
   <strong>Board Name:</strong>
   <%= @board.name %>
+
 </p>
 
+<ul>
+	<% @pins.each do |pin| %>
+		<li><%= image_tag pin.image.url %></li>
+	<% end %>
+</ul>
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %> |

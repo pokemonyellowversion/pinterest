@@ -20,13 +20,18 @@ class PinsController < ApplicationController
 	def create
 		@pin = Pin.new(pin_params)
 			if @pin.save
-				redirect_to boards_path
+				redirect_to :back
 			else
 				render :new
 			end
 	end
 
 	def update
+		if @pin.update_attributes(pin_params)
+			redirect_to boards_path
+		else
+			render :edit
+		end
 	end
 
 	def destroy
@@ -38,7 +43,7 @@ class PinsController < ApplicationController
 		end
 
 		def pin_params
-			params.require(:pin).permit(:description)
+			params.require(:pin).permit(:description, :image)
 		end
 
 
