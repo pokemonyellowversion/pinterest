@@ -9,7 +9,6 @@ class BoardsController < ApplicationController
 	def show
 		@board = Board.find(params[:id])
 		@pins = Pin.all
-
 	end
 
 	def new

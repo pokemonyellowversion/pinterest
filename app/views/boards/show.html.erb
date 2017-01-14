@@ -11,6 +11,10 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
+<%= link_to 'Edit', edit_pin_path %>
+	<%= link_to 'Delete', pin, method: :delete, data: {
+		confirm: 'Are you sure?' } %>
 		
 <% end %>
 
