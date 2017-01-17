@@ -2,7 +2,7 @@
   <h1 class="boardName"><%= @board.name %></h1>
 </div>
 
-<% @pins.each do |pin| %>
+<% @board.pins.each do |pin| %>
 
 <div class="card">
   <div class="card-image"><%= image_tag pin.image.url %>
@@ -24,5 +24,5 @@
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %> |
-<%= link_to 'Save Pin', new_board_pin_path(:board_id) %>
+<%= link_to 'New Pin', new_board_pin_path(@board) %>
 

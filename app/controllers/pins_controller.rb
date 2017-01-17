@@ -11,18 +11,21 @@ class PinsController < ApplicationController
 
 	def new
 		@pin = Pin.new
+		@board = Board.find(params[:board_id])
 	end
 
 	def edit
 	end
 
 	def create
+		@board = Board.find(params[:board_id])
 		@pin = Pin.new(pin_params)
-			if @pin.save
-				redirect_to :back
-			else
-				render :new
-			end
+		@pin.board = @board
+		if @pin.save
+			redirect_to @board
+		else
+			render :new
+		end
 	end
 
 	def update

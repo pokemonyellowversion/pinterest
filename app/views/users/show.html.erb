@@ -14,5 +14,5 @@
 
 <% @boards.each do |board| %>
 	<h3 class="boardLabel"><%= link_to board.name, board %></h3>
-	<%= Pin.count %>
+	<%= board.pins.count %> Pins
 <% end %>
