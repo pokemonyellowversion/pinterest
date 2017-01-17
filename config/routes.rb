@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root "users#show"
 
-  resources :users
+  resources :users, only: [:new, :create]
 
   resources :boards, shallow: true do
     resources :pins

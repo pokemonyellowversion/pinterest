@@ -11,11 +11,10 @@
   </div>
   
   <div class="card-block">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text"><%= pin.description %></p>
   </div>
 
 </div>
-
 	<%= link_to 'Edit', edit_pin_path %>
 	<%= link_to 'Delete', pin, method: :delete, data: {
 		confirm: 'Are you sure?' } %>

@@ -7,9 +7,10 @@
 
   <%= form.file_field :image %><br><br>
 
-  <%#= form.hidden_field :board_id, value: @pin.board.id %>
-	<%= p params %>
+  <%= form.hidden_field :board_id, value: @pin.board_id %>
+	
   <%= form.submit 'Save Pin!' %>
+
 <% end %>
 
-<%= link_to 'Back' %>
+<%= link_to 'Back', :back %>

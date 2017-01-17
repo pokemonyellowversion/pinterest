@@ -7,7 +7,6 @@ class PinsController < ApplicationController
 	end
 
 	def show
-		@pin = Pin.find(params[:id])
 	end
 
 	def new
@@ -35,6 +34,8 @@ class PinsController < ApplicationController
 	end
 
 	def destroy
+		@pin.destroy
+		redirect_to :back
 	end
 
 	private
