@@ -1,3 +1,7 @@
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %> |
+<%= link_to 'New Pin', new_board_pin_path(@board) %>
+
 <div class="boardHeader">
   <h1 class="boardName"><%= @board.name %></h1>
 </div>
@@ -6,8 +10,12 @@
 
 <div class="card">
   <div class="card-image"><%= image_tag pin.image.url %>
-  	<input class="update" type="button" value="Edit" />
-  	<input class="delete" type="button" value="Delete" />
+  	<% if @board.user == current_user %>
+      <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-xs btn-default edit' %>
+  	
+      <%= link_to 'Delete', pin, :class => 'btn btn-xs btn-danger delete', method: :delete, data: {
+        confirm: 'Are you sure?' } %>
+    <% end %>
   </div>
   
   <div class="card-block">
@@ -15,14 +23,5 @@
   </div>
 
 </div>
-	<%= link_to 'Edit', edit_pin_path %>
-	<%= link_to 'Delete', pin, method: :delete, data: {
-		confirm: 'Are you sure?' } %>
-		
+	
 <% end %>
-
-
-<%= link_to 'Edit', edit_board_path(@board) %> |
-<%= link_to 'Back', boards_path %> |
-<%= link_to 'New Pin', new_board_pin_path(@board) %>
-

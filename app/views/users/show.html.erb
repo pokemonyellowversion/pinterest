@@ -2,7 +2,7 @@
 
 <ul class="nav nav-pills">
   <li class="active"><%= link_to "Boards", boards_path %></li>
-  <li><%= link_to "Pins" %></li>
+  <li><%= link_to "Pins", pins_path %></li>
   <li><%= link_to "Likes" %></li>
 </ul>
 
@@ -16,3 +16,4 @@
 	<h3 class="boardLabel"><%= link_to board.name, board %></h3>
 	<%= board.pins.count %> Pins
 <% end %>
+

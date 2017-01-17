@@ -1,0 +1,11 @@
+<h1>Edit Pin</h1>
+<%= form_for @pin, html: { multipart: true } do |form| %>
+
+  <%= form.label :description %>
+  <%= form.text_field :description %><br>
+  
+  <%= form.submit 'Save Pin!' %>
+
+<% end %>
+
+<%= link_to 'Back', board_path(@pin.board) %>

@@ -30,7 +30,7 @@ class PinsController < ApplicationController
 
 	def update
 		if @pin.update_attributes(pin_params)
-			redirect_to boards_path
+			redirect_to board_path(@pin.board)
 		else
 			render :edit
 		end
@@ -39,6 +39,10 @@ class PinsController < ApplicationController
 	def destroy
 		@pin.destroy
 		redirect_to :back
+	end
+
+	def all
+		@pins = Pin.all
 	end
 
 	private

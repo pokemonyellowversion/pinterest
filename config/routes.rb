@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :pins
   end
 
+  get '/pins', to: 'pins#all'
+
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'

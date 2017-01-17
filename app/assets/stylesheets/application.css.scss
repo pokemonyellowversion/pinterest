@@ -19,7 +19,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 .headingName {
  	font-size: 48px;
  	letter-spacing: -1.75px;
@@ -82,7 +81,7 @@ a:hover {
 div.card img {
 	max-width: 236px;
 	border-radius: 8px;
-    float: left;
+
     position: relative;
 }
 
@@ -92,6 +91,17 @@ div.card img:hover {
 
 .card input {
     display: none;
+}
+
+.card a {
+    display: none;
+}
+
+.card:hover a {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .card:hover input{
@@ -109,9 +119,10 @@ div.card img:hover {
 }
 
 .card {
+    float: left;
 	width: 256px;
-	display:inline-block;
 	margin: auto;
     padding: 10px;
     position: relative;
 }
+
