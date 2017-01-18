@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "users#show"
+  root "pins#index"
 
   resources :users, only: [:new, :create]
 
