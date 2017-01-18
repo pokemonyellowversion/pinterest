@@ -4,6 +4,7 @@
 
 <div class="boardHeader">
   <h1 class="boardName"><%= @board.name %></h1>
+  <%= @board.pins.count %> Pins
 </div>
 
 <% @board.pins.each do |pin| %>

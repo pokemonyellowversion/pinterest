@@ -1,4 +1,10 @@
-<h1>All Pins</h1>
+<div class="headingName"><%= @user.name %></div>
+
+<ul class="nav nav-pills">
+  <li><%= link_to "Boards", boards_path %></li>
+  <li class="active"><%= link_to "Pins", pins_path %></li>
+  <li><%= link_to "Likes" %></li>
+</ul>
 
 <% @pins.each do |pin| %>
 	<div class="card">

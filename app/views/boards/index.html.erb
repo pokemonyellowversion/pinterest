@@ -4,7 +4,7 @@
 	<h3><%= link_to board.name, board %></h3>
 
 	<%= link_to 'Edit', edit_board_path(board) %>
-	<%= link_to 'Destroy', board, method: :delete, data: {
+	<%= link_to 'Delete', board, method: :delete, data: {
 		confirm: 'Are you sure?' } %>
 <% end %>
 
