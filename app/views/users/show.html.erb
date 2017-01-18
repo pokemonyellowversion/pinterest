@@ -1,5 +1,7 @@
 <div class="headingName"><%= @user.name %></div>
 
+<%= image_tag @user.image.url, class:'img-responsive rounded image-cropper' %>
+
 <ul class="nav nav-pills">
   <li class="active"><%= link_to "Boards", boards_path %></li>
   <li><%= link_to "Pins", pins_path %></li>

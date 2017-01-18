@@ -1,5 +1,8 @@
 <h1>All Boards</h1>
 
+<%= link_to 'New Board', new_board_path %>
+<%= link_to 'Back', root_path %>
+
 <% @boards.each do |board| %>
 	<h3><%= link_to board.name, board %></h3>
 
@@ -10,5 +13,4 @@
 
 <br>
 
-<%= link_to 'New Board', new_board_path %>
-<%= link_to 'Back', root_path %>
+
