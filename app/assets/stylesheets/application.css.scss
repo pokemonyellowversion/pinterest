@@ -120,11 +120,19 @@ a.btn.btn-xs.btn-default.delete {
     margin: 10px;
     position: relative;
     object-fit: cover;
-  }
-  .image-cropper img {
+}
+  
+.image-cropper img {
     height: 100%;
     min-width: 100%;
     left: 50%;
     position: relative;
     transform: translateX(-50%);
-  }
+}
+
+div.board-image img {
+    object-fit: cover;
+    height: 200px;
+    width: 300px;
+    border-radius: 8px;
+}

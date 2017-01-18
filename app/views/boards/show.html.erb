@@ -8,25 +8,25 @@
 </div>
 
 <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
-<% @board.pins.each do |pin| %>
 
-<div class="card grid-item">
-  <div class="card-image"><%= image_tag pin.image.url %>
-  	<% if @board.user == current_user %>
-      <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-xs btn-default edit' %>
-  	
-      <%= link_to 'Delete', pin, :class => 'btn btn-xs btn-default delete', method: :delete, data: {
-        confirm: 'Are you sure?' } %>
-    <% end %>
-  </div>
+  <% @board.pins.each do |pin| %>
+
+    <div class="card grid-item">
+
+      <div class="card-image"><%= image_tag pin.image.url %>
+      	<% if @board.user == current_user %>
+          <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-xs btn-default edit' %>	
+          <%= link_to 'Delete', pin, :class => 'btn btn-xs btn-default delete', method: :delete, data: {
+            confirm: 'Are you sure?' } %>
+        <% end %>
+      </div> 
+
+      <div class="card-block">
+        <p class="card-text"><%= pin.description %></p>
+      </div>
+
+    </div>
   
-  <div class="card-block">
-    <p class="card-text"><%= pin.description %></p>
-  </div>
+  <% end %>
 
-</div>
-
-
-	
-<% end %>
 </div>

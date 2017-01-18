@@ -12,7 +12,24 @@
 <br>
 
 <% current_user.boards.each do |board| %>
-	<h3 class="boardLabel"><%= link_to board.name, board %></h3>
-	<%= board.pins.count %> Pins
-<% end %>
+	
+	<div class="board">
+  
+  	<div class="board-image"><%= image_tag board.image.url(:medium) %>
+  	
+  	<% if @user == current_user %>
+      <%= link_to 'Edit', edit_board_path(board), :class => 'btn btn-xs btn-default edit' %> 	
+      <%= link_to 'Delete', board, :class => 'btn btn-xs btn-default delete', method: :delete, data: {
+        confirm: 'Are you sure?' } %>
+    
+    <% end %>
+  
+  </div>
+  
+  <div class="board-block">
+    <p class="board-text"><%= link_to board.name, board %><br>
+    <%= board.pins.count %> Pins</p>
+  </div>
+</div>
+ <% end %>
 
