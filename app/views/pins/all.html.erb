@@ -6,9 +6,9 @@
   <li><%= link_to "Likes" %></li>
 </ul>
 
-
+<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
 <% @pins.each do |pin| %>
-	<div class="card">
+	<div class="card grid-item">
 	  <div class="card-image"><%= image_tag pin.image.url %>
 	  	<% if pin.board.user == current_user %>
 	      <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-xs btn-default edit' %>
@@ -22,7 +22,6 @@
 	  </div>
 
 <% end %>
-
-<br>
+</div>
 
 

@@ -4,6 +4,7 @@
 <%= link_to 'Back', root_path %>
 
 <% @boards.each do |board| %>
+	<%= image_tag board.image.url(:thumb) %>
 	<h3><%= link_to board.name, board %></h3>
 
 	<%= link_to 'Edit', edit_board_path(board) %>
