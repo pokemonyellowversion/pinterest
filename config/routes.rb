@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root "pins#index"
 
-  resources :users, only: [:new, :create, :show]
+  resources :users
 
   resources :boards, shallow: true do
     resources :pins
