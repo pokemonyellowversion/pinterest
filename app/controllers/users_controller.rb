@@ -16,8 +16,6 @@ class UsersController < ApplicationController
 	end
 
   def show
-    @boards = Board.all
-    @pins = Pin.all
   end
 
 

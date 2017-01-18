@@ -6,13 +6,9 @@
   <li><%= link_to "Likes" %></li>
 </ul>
 
-
-
-
-
 <br>
 
-<% @boards.each do |board| %>
+<% current_user.boards.each do |board| %>
 	<h3 class="boardLabel"><%= link_to board.name, board %></h3>
 	<%= board.pins.count %> Pins
 <% end %>

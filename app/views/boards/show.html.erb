@@ -13,7 +13,7 @@
   	<% if @board.user == current_user %>
       <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-xs btn-default edit' %>
   	
-      <%= link_to 'Delete', pin, :class => 'btn btn-xs btn-danger delete', method: :delete, data: {
+      <%= link_to 'Delete', pin, :class => 'btn btn-xs btn-default delete', method: :delete, data: {
         confirm: 'Are you sure?' } %>
     <% end %>
   </div>

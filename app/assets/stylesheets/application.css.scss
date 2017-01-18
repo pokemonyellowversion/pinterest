@@ -81,16 +81,11 @@ a:hover {
 div.card img {
 	max-width: 236px;
 	border-radius: 8px;
-
     position: relative;
 }
 
 div.card img:hover {
     opacity: 0.8;
-}
-
-.card input {
-    display: none;
 }
 
 .card a {
@@ -104,18 +99,8 @@ div.card img:hover {
     left: 10px;
 }
 
-.card:hover input{
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.card:hover input.delete{
-    display: block;
-    position: absolute;
-    top: 40px;
-    right: 20px;
+a.btn.btn-xs.btn-default.delete {
+    left: 45px;
 }
 
 .card {
@@ -125,4 +110,3 @@ div.card img:hover {
     padding: 10px;
     position: relative;
 }
-
