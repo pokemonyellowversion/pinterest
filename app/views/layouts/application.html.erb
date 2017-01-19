@@ -8,7 +8,7 @@
   <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>
 </head>
 
-<body class="container-fluid">
+<body>
 
 <nav class="navbar">
   <div class="container-fluid">
@@ -22,24 +22,24 @@
     </form>
     <ul class="nav navbar-nav navbar-right">
       <li class="active"><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'Profile', user_path(current_user) %></li>
+      <li><%= link_to 'Profile', user_path(:id) %></li>
     </ul>
   </div>
 </nav>
-
+<div class="container-fluid">
 <p>
   <% if current_user %>
-  	Welcome, <%= current_user.name %>
-  	&nbsp;&nbsp;|&nbsp;&nbsp;
-  	<%= link_to 'Log Out', session_path('dummy'), method: :delete %>
+    Welcome, <%= current_user.name %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
   <% else %>
-  	<%= link_to 'Log In', login_path %>
-  	&nbsp;&nbsp;|&nbsp;&nbsp;
-  	<%= link_to 'Sign Up', new_user_path %>
+    <%= link_to 'Log In', login_path %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to 'Sign Up', new_user_path %>
   <% end %>
 </p>
 
 <%= yield %>
-
+</div>
 </body>
 </html>

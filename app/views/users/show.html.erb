@@ -1,7 +1,7 @@
 <div class="flex-container">
-	<div class="headingName"><%= current_user.name %></div>
-	<%= image_tag current_user.image.url, class:'img-responsive rounded image-cropper' %>
-	<%= link_to 'Edit Profile', edit_user_path(current_user) %>
+  <div class="headingName"><%= current_user.name %></div>
+  <%= image_tag current_user.image.url, class:'img-responsive rounded image-cropper' %>
+  <%= link_to 'Edit Profile', edit_user_path(current_user) %>
 </div>
 
 <ul class="nav nav-pills">
@@ -11,27 +11,23 @@
 </ul>
 
 <br>
-<div id="masonry-grid" class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
 
-	<% current_user.boards.each do |board| %>
-		<div class="board grid-item">
-  		<div class="board-image"><%= image_tag board.image.url(:medium) %>
-
-  		</div>
-  		<div class="board-block">
-    		<p class="board-text boardLabel"><%= link_to board.name, board %></p>
-    		<p class="pin-count"><%= board.pins.count %> Pins</p>
-    			<% if board.user == current_user %>
-    		  	<%= link_to 'Edit', edit_board_path(board), :class => 'btn btn-xs btn-default edit' %> 	
-    		  	<%= link_to 'Delete', board, :class => 'btn btn-xs btn-default delete', method: :delete, data: {
-    		      confirm: 'Are you sure?' } %> 
-    		  <% end %> 
-  		</div>
-		</div>
- 	<% end %>
-
-</div>
-
-<script>
-ready();
-</script>
+<% current_user.boards.each do |board| %>
+  <div class="board col-md-3">
+    
+    <div class="board-image">
+      <%= image_tag board.image.url(:medium) %>
+    </div>
+    
+    <div class="board-block">
+      <p class="board-text boardLabel"><%= link_to board.name, board %></p>
+      <p class="pin-count"><%= board.pins.count %> Pins</p>
+        <% if board.user == current_user %>
+          <%= link_to 'Edit', edit_board_path(board), :class => 'btn btn-xs btn-default edit' %>  
+          <%= link_to 'Delete', board, :class => 'btn btn-xs btn-default delete', method: :delete, data: {
+            confirm: 'Are you sure?' } %> 
+        <% end %> 
+    </div>
+  
+  </div>
+<% end %>

@@ -4,6 +4,12 @@
 	  <%= image_tag @user.image.url(:thumb) %><br/>
 	  <%= f.check_box :delete_image %>Delete Image<br/>
 	<% end %>
+
+	<%= f.label :about %><br>
+	<%= f.text_field :about %><br>
+
+	<%= f.label :location %><br>
+	<%= f.text_field :location %><br>
 	
 	<%= f.file_field :image %>
 
