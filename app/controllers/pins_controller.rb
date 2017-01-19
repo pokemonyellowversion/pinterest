@@ -44,6 +44,7 @@ class PinsController < ApplicationController
 	def all
 		@pins = Pin.all
 		@user = current_user
+		
 	end
 
 	private

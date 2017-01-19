@@ -74,8 +74,6 @@
     color: #555;
 }
 
-
-
 .image-cropper {
     border-radius: 50%;
     margin: 10px;
@@ -122,26 +120,25 @@ div.board-image img {
 }
 
 .pin {
-    width: 256px;
+    width: 236px;
     text-align: center;
+    padding: 0;
+   
 }
 
 img.pin-img-top {
     width: 236px;
     border-radius: 8px;
     object-fit: cover;
-    display: inline-block;
+    
 }
 
 .pin-container {
-    display: -ms-flexbox;
-    -ms-flex-direction: column;
-    -ms-flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 100vw;
-    font-size: 0; 
+    width: 100vw; 
     padding-top: 10px;
 }
 
@@ -160,4 +157,19 @@ img.pin-img-top {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+.parallax { 
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
 }

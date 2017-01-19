@@ -17,16 +17,3 @@
 //= require bootstrap
 //= require_tree .
 
-// $(document).ready(ready);
-// $(document).on('page:load', ready);
-
-function ready() {
-	console.log('masonry')
-// jQuery
-	var $container = jQuery('#masonry-grid');
-	// initialize
-	$container.masonry({
-	  columnWidth: 200,
-	  itemSelector: '.grid-item'
-	});
-}
