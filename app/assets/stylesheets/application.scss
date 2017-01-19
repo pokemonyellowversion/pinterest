@@ -74,42 +74,7 @@
     color: #555;
 }
 
-a:hover {
-    text-decoration: none;
-}
 
-div.card img {
-	max-width: 236px;
-	border-radius: 8px;
-    position: relative;
-}
-
-div.card img:hover {
-    opacity: 0.8;
-}
-
-.card a {
-    display: none;
-}
-
-.card:hover a {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-a.btn.btn-xs.btn-default.delete {
-    left: 45px;
-}
-
-.card {
-    float: left;
-	width: 256px;
-	margin: 0;
-    padding: 10px;
-    position: relative;
-}
 
 .image-cropper {
     border-radius: 50%;
@@ -146,7 +111,7 @@ div.board-image img {
 }
 
 .flex-container {
-  display: flex; /* or inline-flex */
+  display: flex;
   justify-content: center;
 }
 
@@ -154,4 +119,45 @@ div.board-image img {
     width: 28px;
     height: 28px;
     margin-top: 18px;
+}
+
+.pin {
+    width: 256px;
+    text-align: center;
+}
+
+img.pin-img-top {
+    width: 236px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.pin-container {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vw;
+    font-size: 0; 
+    padding-top: 10px;
+}
+
+.pin-block {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pin a {
+    display: none;
+}
+
+.pin:hover a {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
