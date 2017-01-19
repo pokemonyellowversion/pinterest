@@ -11,13 +11,17 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require_tree .
-var loaded = function(){
+
+// $(document).ready(ready);
+// $(document).on('page:load', ready);
+
+function ready() {
+	console.log('masonry')
 // jQuery
 	var $container = jQuery('#masonry-grid');
 	// initialize
@@ -26,5 +30,3 @@ var loaded = function(){
 	  itemSelector: '.grid-item'
 	});
 }
-$(document).on("page:load ready", loaded);
-

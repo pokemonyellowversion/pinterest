@@ -1,7 +1,8 @@
-<div class="headingName"><%= @user.name %></div>
-
-<%= image_tag @user.image.url, class:'img-responsive rounded image-cropper' %>
-<%= link_to 'Edit Profile', edit_user_path(:id) %>
+<div class="flex-container">
+	<div class="headingName"><%= current_user.name %></div>
+	<%= image_tag current_user.image.url, class:'img-responsive rounded image-cropper' %>
+	<%= link_to 'Edit Profile', edit_user_path(current_user) %>
+</div>
 
 <ul class="nav nav-pills">
   <li><%= link_to "Boards", boards_path %></li>
@@ -9,7 +10,7 @@
   <li><%= link_to "Likes" %></li>
 </ul>
 
-<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
+<div id="masonry-grid" class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
 <% @pins.each do |pin| %>
 	<div class="card grid-item">
 	  <div class="card-image"><%= image_tag pin.image.url %>
@@ -27,4 +28,6 @@
 <% end %>
 </div>
 
-
+<script>
+ready();
+</script>

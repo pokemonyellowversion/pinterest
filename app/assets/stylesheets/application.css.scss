@@ -113,11 +113,10 @@ a.btn.btn-xs.btn-default.delete {
 
 .image-cropper {
     border-radius: 50%;
-    margin: auto;
+    margin: 10px;
     width: 200px;
     height: 200px;
     overflow: hidden;
-    margin: 10px;
     position: relative;
     object-fit: cover;
 }
@@ -135,4 +134,18 @@ div.board-image img {
     height: 200px;
     width: 300px;
     border-radius: 8px;
+}
+
+.pin-count {
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    line-height: 14px;
+    word-spacing: 0;
+    color: #b5b5b5;
+    font-weight: bold;
+}
+
+.flex-container {
+  display: flex; /* or inline-flex */
+  justify-content: center;
 }
