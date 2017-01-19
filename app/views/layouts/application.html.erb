@@ -13,15 +13,9 @@
 <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img src="http://www.nwakidsdirectory.com/wp-content/uploads/2015/05/pinterest-logo-transparent-300x300.png" width="28" height="28"></a>
+      <%= link_to(image_tag("http://www.nwakidsdirectory.com/wp-content/uploads/2015/05/pinterest-logo-transparent-300x300.png"), root_path) %>
     </div>
-    <form class="navbar-form navbar-left">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-    </form>
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><%= link_to 'Home', root_path %></li>
       <li><%= link_to 'Profile', user_path(:id) %></li>
     </ul>
   </div>
