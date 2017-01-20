@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'pages#show', page: 'home'
-  get '/pages/:page', to: 'pages#show'
+  
 
   resources :users
 
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
+
+  get '/pages/:page', to: 'pages#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
