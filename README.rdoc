@@ -4,11 +4,17 @@
 
 A full stack Rails app of the popular photo sharing website, Pinterest.
 
-<img src=http://i.imgur.com/1eYHRXv.png>
+<img src=http://i.imgur.com/KwVZr0T.png>
+Home page
 
-<img src=http://i.imgur.com/wRBkS0G.png>
+<img src=http://i.imgur.com/DGYgXM2.png>
+Profile page
 
-<img src=http://i.imgur.com/iMxKgy5.png>
+<img src=http://i.imgur.com/c6C5RHT.png>
+Board view
+
+<img src=http://i.imgur.com/arjcSOq.png>
+Hover over a pin to see edit and delete buttons
 
 <b>[Technologies Used]</b>
 
