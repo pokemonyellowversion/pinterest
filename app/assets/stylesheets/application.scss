@@ -99,6 +99,21 @@ div.board-image img {
     border-radius: 8px;
 }
 
+.board {
+    padding-bottom: 15px;
+}
+
+.board .btn {
+    display: none;
+}
+
+.board:hover .btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 .pin-count {
     font-size: 12px;
     letter-spacing: -0.1px;
