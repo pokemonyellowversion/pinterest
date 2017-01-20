@@ -1,28 +1,25 @@
-== README
+# project02: PINTEREST PROJECT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<b>[Description]</b>
 
-Things you may want to cover:
+A full stack Rails app of the popular photo sharing website, Pinterest.
 
-* Ruby version
+<img src=http://i.imgur.com/1eYHRXv.png>
 
-* System dependencies
+<img src=http://i.imgur.com/wRBkS0G.png>
 
-* Configuration
+<img src=http://i.imgur.com/iMxKgy5.png>
 
-* Database creation
+<b>[Technologies Used]</b>
 
-* Database initialization
+Technologies used are Ruby on Rails, HTML and CSS.
 
-* How to run the test suite
+<b>[Getting Started]</b>
 
-* Services (job queues, cache servers, search engines, etc.)
+Click <a href="http://pinterest-project.herokuapp.com/">here</a> to go to the app.
 
-* Deployment instructions
+Trello board <a href="https://trello.com/b/PWanEG2x/pinterest-redesigned">here</a>.
 
-* ...
+<b>[Next Steps]</b>
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The app has the basic functionality of Pinterest but doesn't include other features I hoped to have such as adding comments or likes.
