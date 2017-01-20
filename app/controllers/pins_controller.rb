@@ -1,13 +1,6 @@
 class PinsController < ApplicationController
 	before_action :set_pin, only: [:show, :edit, :update, :destroy]
 	before_action :authorize, except: [:index, :show]
-	
-	def index
-		@pins = Pin.all
-	end
-
-	def show
-	end
 
 	def new
 		@pin = Pin.new
