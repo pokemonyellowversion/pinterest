@@ -141,26 +141,24 @@ div.board-image img {
 }
 
 .pin {
-    width: 236px;
     text-align: center;
-    padding: 0;
     position: relative;
     display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+
 }
 
 img.pin-img-top {
-    width: 236px;
-    border-radius: 8px;
-    object-fit: cover;
+border-radius: 8px;
+margin-bottom: 0px;
+width: 236px;
     
 }
 
-.pin-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 100vw; 
-    padding: 0px;
+.container {
+column-count: 4;
+column-gap: 1em;
 }
 
 .pin-block {
