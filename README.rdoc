@@ -4,16 +4,16 @@
 
 A full stack Rails app of the popular photo sharing website, Pinterest.
 
-<img src=http://i.imgur.com/KwVZr0T.png>
+http://i.imgur.com/KwVZr0T.png
 Home page
 
-<img src=http://i.imgur.com/DGYgXM2.png>
+http://i.imgur.com/DGYgXM2.png
 Profile page
 
-<img src=http://i.imgur.com/c6C5RHT.png>
+http://i.imgur.com/c6C5RHT.png
 Board view
 
-<img src=http://i.imgur.com/arjcSOq.png>
+http://i.imgur.com/arjcSOq.png
 Hover over a pin to see edit and delete buttons
 
 <b>[Technologies Used]</b>
@@ -22,9 +22,9 @@ Technologies used are Ruby on Rails, HTML and CSS.
 
 <b>[Getting Started]</b>
 
-Click <a href="http://pinterest-project.herokuapp.com/">here</a> to go to the app.
+Click here to go to the app: http://pinterest-project.herokuapp.com/.
 
-Trello board <a href="https://trello.com/b/PWanEG2x/pinterest-redesigned">here</a>.
+Trello board: https://trello.com/b/PWanEG2x/pinterest-redesigned.
 
 <b>[Next Steps]</b>
 
