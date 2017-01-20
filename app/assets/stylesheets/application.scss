@@ -116,6 +116,7 @@ div.board-image img {
 
 .board {
     padding-bottom: 15px;
+    position: relative;
 }
 
 .board .btn {
@@ -126,7 +127,12 @@ div.board-image img {
     display: block;
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 20px;
+}
+
+.board a.btn.delete {
+    top: 10px;
+    left: 60px;
 }
 
 .pin-count {
@@ -191,7 +197,7 @@ img.pin-img-top {
     left: 20px;
 }
 
-a.btn.delete {
+.pin a.btn.delete {
     top: 10px;
     left: 60px;
 }
@@ -209,4 +215,10 @@ a.btn.delete {
 
 .profile-image {
     position: relative;
+}
+
+.new-board-button {
+    margin-right: auto;
+    align-self: flex-end;
+    position: absolute;
 }

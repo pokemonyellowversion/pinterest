@@ -7,24 +7,23 @@
   <%= @board.pins.count %> Pins
 </div>
 
+
+<div class="container">
+  
   <% @board.pins.each do |pin| %>
-
-    <div class="card">
-
-      <div class="card-image"><%= image_tag pin.image.url %>
-        
+  
+    <div class="pin">
+      <%= image_tag pin.image.url, :class => "pin-img-top" %>
         <% if @board.user == current_user %>
-          <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-xs btn-default edit' %>  
-          <%= link_to 'Delete', pin, :class => 'btn btn-xs btn-default delete', method: :delete, data: {
-            confirm: 'Are you sure?' } %>
-        <% end %>
-
-      </div> 
-
-      <div class="card-block">
-        <p class="card-text"><%= pin.description %></p>
+            <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn btn-xs btn-default edit' %>
+            <%= link_to 'Delete', pin, :class => 'btn btn-xs btn-default delete', method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+      <div class="pin-block">
+        <h4 class="pin-title"><%= pin.description %></h4>
+        <p class="pin-text"></p>
       </div>
-
     </div>
   
   <% end %>
+
+</div>

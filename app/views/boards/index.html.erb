@@ -1,21 +1,18 @@
 <div class="flex-container">
-  <div class="headingName"><%= current_user.name %></div>
-  <%= image_tag current_user.image.url, class:'img-responsive rounded image-cropper' %>
-  <%= link_to 'Edit Profile', edit_user_path(current_user) %>
+  <div class="new-board-button"><%= link_to image_tag("new-board-button.png"), new_board_path %></div>
+  <div class="headingName"><%= current_user.name %><br>
+    <%= current_user.location %>&nbsp; &frasl; &nbsp;<%= current_user.about %>
+  </div>  
+  <div class="profile-image">
+    <%= image_tag current_user.image.url, class:'img-responsive rounded image-cropper' %>
+    <%= link_to 'Edit Profile', edit_user_path(current_user), :class => 'btn btn-xs btn-default edit' %>
+  </div>
 </div>
 
 <ul class="nav nav-pills">
   <li class="active"><%= link_to "Boards", boards_path %></li>
   <li><%= link_to "Pins", pins_path %></li>
-  <li><%= link_to "Likes" %></li>
 </ul>
-
-
-
-<%= link_to 'New Board', new_board_path %>
-<%= link_to 'Back', root_path %>
-
-<br>
 
 <% current_user.boards.each do |board| %>
   <div class="board col-md-3">
