@@ -123,7 +123,7 @@ div.board-image img {
     width: 236px;
     text-align: center;
     padding: 0;
-   
+    position: relative;
 }
 
 img.pin-img-top {
@@ -139,7 +139,7 @@ img.pin-img-top {
     flex-wrap: wrap;
     height: 100vw;
     width: 100vw; 
-    padding-top: 10px;
+    padding: 0px;
 }
 
 .pin-block {
@@ -157,6 +157,11 @@ img.pin-img-top {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+a.btn.delete {
+    top: 10px;
+    left: 50px;
 }
 
 .parallax { 
