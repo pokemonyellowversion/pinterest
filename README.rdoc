@@ -24,8 +24,8 @@ Technologies used are Ruby on Rails, HTML and CSS.
 
 Click here to go to the app: http://pinterest-project.herokuapp.com/.
 
-Trello board: https://trello.com/b/PWanEG2x/pinterest-redesigned.
+Trello board: https://trello.com/b/PWanEG2x/pinterest-project.
 
 <b>[Next Steps]</b>
 
-The app has the basic functionality of Pinterest but doesn't include other features I hoped to have such as adding comments or likes. Thank you!
+The app has the basic functionality of Pinterest but doesn't include other features I hoped to have such as adding comments or likes. 
