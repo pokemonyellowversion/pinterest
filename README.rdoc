@@ -1,20 +1,20 @@
-# project02: PINTEREST PROJECT
+<b># project02: PINTEREST PROJECT</b>
 
 <b>[Description]</b>
 
 A full stack Rails app of the popular photo sharing website, Pinterest.
 
 http://i.imgur.com/KwVZr0T.png
-Home page
+<b>Home page</b>
 
 http://i.imgur.com/DGYgXM2.png
-Profile page
+<b>Profile page</b>
 
 http://i.imgur.com/c6C5RHT.png
-Board view
+<b>Board view</b>
 
 http://i.imgur.com/arjcSOq.png
-Hover over a pin to see edit and delete buttons
+<b>Hover over a pin to see edit and delete buttons</b>
 
 <b>[Technologies Used]</b>
 
