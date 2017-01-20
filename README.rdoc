@@ -28,4 +28,4 @@ Trello board: https://trello.com/b/PWanEG2x/pinterest-redesigned.
 
 <b>[Next Steps]</b>
 
-The app has the basic functionality of Pinterest but doesn't include other features I hoped to have such as adding comments or likes.
+The app has the basic functionality of Pinterest but doesn't include other features I hoped to have such as adding comments or likes. Thank you!
