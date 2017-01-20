@@ -19,6 +19,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.home img{
+    display:block;
+    margin:auto;
+    border-radius: 8px;
+}
+
 .headingName {
  	font-size: 48px;
  	letter-spacing: -1.75px;
@@ -139,6 +145,7 @@ div.board-image img {
     text-align: center;
     padding: 0;
     position: relative;
+    display: inline-block;
 }
 
 img.pin-img-top {
@@ -152,8 +159,7 @@ img.pin-img-top {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100vw;
-    width: 100vw; 
+    height: 100vw; 
     padding: 0px;
 }
 
@@ -177,19 +183,4 @@ img.pin-img-top {
 a.btn.delete {
     top: 10px;
     left: 50px;
-}
-
-.parallax { 
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-body, html {
-    height: 100%;
 }

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'jquery-turbolinks'
 gem "aws-sdk", "~> 2"
 gem "paperclip", "~> 5.0.0"
 gem "figaro"
