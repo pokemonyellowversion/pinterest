@@ -1,17 +1,3 @@
-<div class="flex-container">
-	<div class="headingName"><%= current_user.name %><br>
-		<%= current_user.location %>&nbsp; &frasl; &nbsp;<%= current_user.about %>
-	</div>	
-	<div class="profile-image">
-		<%= image_tag current_user.image.url, class:'img-responsive rounded image-cropper' %>
-		<%= link_to 'Edit Profile', edit_user_path(current_user), :class => 'btn btn-xs btn-default edit' %>
-	</div>
-</div>
-
-<ul class="nav nav-pills">
-  <li><%= link_to "Boards", boards_path %></li>
-  <li class="active"><%= link_to "Pins", pins_path %></li>
-</ul>
 
 <div class="container">
 	

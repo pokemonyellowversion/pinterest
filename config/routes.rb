@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'pages#show', page: 'home'
+  root 'pins#all', page: 'home'
   
 
   resources :users
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :pins
   end
 
-  get '/pins', to: 'pins#all'
+  #get '/pins', to: 'pins#all'
 
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
