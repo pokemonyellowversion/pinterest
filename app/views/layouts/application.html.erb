@@ -11,28 +11,25 @@
 
   <nav class="navbar">
     <div class="container-fluid">
-      <div class="navbar-header">
+      
         <%= link_to(image_tag("pinterest-logo.png"), root_path) %>
-      </div>
+        <% if current_user %>
+          Welcome, <%= current_user.name %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
+        <% else %>
+          <%= link_to 'Log In', login_path %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'Sign Up', new_user_path %>
+        <% end %>
+      
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to(image_tag("user-avatar.png"), user_path(:id)) %></li>
       </ul>
     </div>
   </nav>
 
-  <div class="container-fluid" id="container">
-    <p>
-      <% if current_user %>
-        Welcome, <%= current_user.name %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
-      <% else %>
-        <%= link_to 'Log In', login_path %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Sign Up', new_user_path %>
-      <% end %>
-    </p>  
-
+  <div class="container-fluid" id="container"> 
   <%= yield %>
   </div>
 

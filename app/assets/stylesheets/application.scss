@@ -19,6 +19,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+nav.navbar div.container-fluid a img {
+    height: 28px;
+    width: 28px;
+}
+
 .home img{
     display:block;
     margin:auto;
