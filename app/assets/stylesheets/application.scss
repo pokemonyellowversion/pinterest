@@ -119,6 +119,10 @@ div.board-image img {
     position: relative;
 }
 
+.board:hover {
+    opacity: .8;
+}
+
 .board .btn {
     display: none;
 }
@@ -128,6 +132,10 @@ div.board-image img {
     position: absolute;
     top: 10px;
     left: 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
 }
 
 .board a.btn.delete {
@@ -180,6 +188,10 @@ img.pin-img-top {
     width: 100%;
 }
 
+.pin:hover {
+    opacity: .8;
+}
+
 .pin-block {
     text-align: left;
     padding-left: 20px;
@@ -195,6 +207,10 @@ img.pin-img-top {
     position: absolute;
     top: 10px;
     left: 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
 }
 
 .pin a.btn.delete {
