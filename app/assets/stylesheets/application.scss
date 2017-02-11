@@ -20,16 +20,7 @@
 @import "bootstrap";
 
 * {
-font-family: "Helvetica Neue", Helvetica;
-}
-
-nav.navbar div.container-fluid a img {
-    height: 28px;
-    width: 28px;
-}
-
-.nav > li > a > img {
-    max-width: 30px;
+    font-family: "Helvetica Neue", Helvetica;
 }
 
 .home img{
@@ -254,4 +245,8 @@ img.pin-img-top {
 
 .navbar-left {
     padding-top: 20px;
+}
+
+ul.nav.navbar-nav.navbar-right {
+    padding-right: 15px;
 }
