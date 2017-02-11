@@ -36,8 +36,7 @@ class PinsController < ApplicationController
 
 	def all
 		@pins = Pin.all
-		@user = current_user
-		
+		@user = current_user	
 	end
 
 	private
@@ -49,5 +48,4 @@ class PinsController < ApplicationController
 	def pin_params
 		params.require(:pin).permit(:description, :image)
 	end
-
 end

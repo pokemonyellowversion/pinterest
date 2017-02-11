@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Pinterest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -11,18 +11,20 @@
 
   <nav class="navbar">
     <div class="container-fluid">
-      
-        <%= link_to(image_tag("pinterest-logo.png"), root_path) %>
+      <ul class="nav navbar-nav">
+        <li><%= link_to(image_tag("pinterest-logo.png"), root_path) %></li>
+        <div class="navbar-left">
         <% if current_user %>
           Welcome, <%= current_user.name %>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
+          &nbsp;|&nbsp;
           <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
         <% else %>
           <%= link_to 'Log In', login_path %>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <%= link_to 'Sign Up', new_user_path %>
         <% end %>
-      
+        </div>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to(image_tag("user-avatar.png"), user_path(:id)) %></li>
       </ul>

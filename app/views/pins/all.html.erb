@@ -1,7 +1,5 @@
 <div class="container">
-	
 	<% @pins.each do |pin| %>
-	
 	  <div class="pin">
 	    <%= image_tag pin.image.url, :class => "pin-img-top" %>
 	    	<% if pin.board.user == current_user %>
@@ -13,7 +11,5 @@
 	      <p class="pin-text"></p>
 	    </div>
 	  </div>
-	
 	<% end %>
-
 </div>

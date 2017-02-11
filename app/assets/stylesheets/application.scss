@@ -19,6 +19,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+* {
+font-family: "Helvetica Neue", Helvetica;
+}
+
 nav.navbar div.container-fluid a img {
     height: 28px;
     width: 28px;
@@ -37,7 +41,7 @@ nav.navbar div.container-fluid a img {
  	word-spacing: -2.75px;
  	font-weight: bold;
  	color: #555;
- 	font-family: "Helvetica Neue", Helvetica
+ 	
 }
 
 .navbar {
@@ -242,4 +246,8 @@ img.pin-img-top {
     margin-right: auto;
     align-self: flex-end;
     position: absolute;
+}
+
+.navbar-left {
+    padding-top: 20px;
 }
